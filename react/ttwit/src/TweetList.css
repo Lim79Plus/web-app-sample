@@ -1,0 +1,16 @@
+.column_tweet{
+    min-width: 40vw;
+    max-width: 600px;
+    overflow-y: scroll;
+    max-height: 100vh;
+}
+
+.column_tweet::-webkit-scrollbar{
+    display: none;
+}
+
+.max{
+    text-align: center;
+    color: #aaaaaa;
+    margin: 1rem 0.5rem 2rem 0.5rem;
+}
