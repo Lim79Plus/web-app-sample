@@ -17,6 +17,8 @@ Tonkatsu T Yamada
 - データベース
     - Postgres 9.6
 
+## 構成図作成
+- [https://geekflare.com/create-application-architecture-diagram/](https://geekflare.com/create-application-architecture-diagram/)
 
 ## 作る時に参考にしたサイト
 
