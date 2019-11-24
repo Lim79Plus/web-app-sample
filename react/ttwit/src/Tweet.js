@@ -1,6 +1,5 @@
 import React from 'react';
 import "./Tweet.css";
-import icon from "./icons/gotoba.png";
 
 class Tweet extends React.Component {
 
