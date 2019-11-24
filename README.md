@@ -2,7 +2,7 @@
 
 ## Special Thanks
 
-Tonkatsu T Yamada
+[Tonkatsu](https://github.com/y-f-tonkatsu)
 フロントエンドのコードはTonkatsu氏に作ってもらいました
 
 ## 構成
