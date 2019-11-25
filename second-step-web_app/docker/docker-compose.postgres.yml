@@ -1,0 +1,15 @@
+version: '3'
+services:
+  # postgres
+  db:
+      image: postgres:9.6
+      container_name: postgres-one
+      environment:
+        POSTGRES_USER: app_user
+        POSTGRES_PASSWORD: passwd
+        POSTGRES_DB: app_db
+        TZ: "Asia/Tokyo"            #timezone
+      ports:
+        - 5432:5432
+      volumes:
+        - ./init:/docker-entrypoint-initdb.d

@@ -14,11 +14,9 @@
     - React
 - バックエンド
     - Go 1.13
+        - Webフレームワークなし
 - データベース
     - Postgres 9.6
-
-## 構成図作成
-- [https://geekflare.com/create-application-architecture-diagram/](https://geekflare.com/create-application-architecture-diagram/)
 
 ## 作る時に参考にしたサイト
 
@@ -34,3 +32,18 @@
     - [dockerで起動しているPostgreSQLのタイムゾーンを設定する](https://qiita.com/reoring/items/9e87176d73675e5fdafa)
     - [【PostgreSQL】任意の文字列をTimestampやDateに変換する方法](https://qiita.com/akidroid/items/a1df9ebb6e8e9ca1b51b)
     - [postgres - シーケンス　inser時に自動採番](http://developpp.blog.jp/archives/8224244.html)
+
+## 学習用の資料
+
+- Githubの使い方
+    - [Git：はじめてのGitとGitHub 無料](https://www.udemy.com/course/intro_git/)
+
+- ブラウザの仕組み
+    - [ブラウザの仕組み](https://www.html5rocks.com/ja/tutorials/internals/howbrowserswork/)
+
+- インターネットが繋がること
+    - [インターネッツの繋がるしくみ（TCP/IP編） slideshare](https://www.slideshare.net/yossy222/tcpip-sastudy)
+    - [Webを支える技術 ―― HTTP，URI，HTML，そしてREST ](https://amzn.to/2qJ11nA)
+
+- Go言語入門
+    - [A Tour of Go (日本語)](https://go-tour-jp.appspot.com/welcome/1)
