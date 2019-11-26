@@ -46,4 +46,5 @@
     - [Webを支える技術 ―― HTTP，URI，HTML，そしてREST ](https://amzn.to/2qJ11nA)
 
 - Go言語入門
+    - まずは自分のPCにGo言語をインストールしてね
     - [A Tour of Go (日本語)](https://go-tour-jp.appspot.com/welcome/1)
