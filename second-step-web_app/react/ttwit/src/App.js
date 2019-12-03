@@ -4,7 +4,6 @@ import './App.css';
 import TweetList from "./TweetList";
 import Menu from "./Menu";
 import Extra from "./Extra";
-import SampleC from "./sampleC";
 
 class App extends React.Component {
 
@@ -12,30 +11,53 @@ class App extends React.Component {
         super(props);
         this.state = {
             "latest": 10,
-            "tweets": SampleC.slice(0, 10)
+            "tweets": []
         }
 
+    }
+
+    componentDidMount() {
+        fetch("http://localhost:8080/msg")
+            .then(res => res.json())
+            .then(
+                (result) => {
+                    console.log(result);
+                    this.setState({
+                        "tweets": result
+                    });
+                },
+                (error) => {
+                    this.setState({
+                        "tweets": [{
+                            "id": 0,
+                            "title": "エラー",
+                            "description": "エラーだ糞",
+                        }]
+                    });
+                }
+            )
     }
 
     componentDidUpdate() {
         let list = document.getElementById("tweetList");
         list.scrollTo({
             top: list.scrollHeight,
-            left:  0,
+            left: 0,
             behavior: 'smooth'
         });
     }
 
     refresh(latest) {
         let isMax = false;
-        if(latest >= SampleC.length){
-            console.log("max");
-            latest = SampleC.length - 1;
+
+        const tweets = this.state.tweets;
+        if (latest >= tweets.length) {
+            latest = tweets.length - 1;
             isMax = true;
         }
         this.setState({
             "latest": latest,
-            "tweets": SampleC.slice(0, latest),
+            "tweets": tweets.slice(0, latest),
             "isMax": isMax
         })
     }
