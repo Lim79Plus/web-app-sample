@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import './App.css';
 import TweetList from "./TweetList";
 import Menu from "./Menu";
@@ -31,7 +30,7 @@ class App extends React.Component {
                         "tweets": [{
                             "id": 0,
                             "title": "エラー",
-                            "description": "エラーだ糞",
+                            "description": error,
                         }]
                     });
                 }
