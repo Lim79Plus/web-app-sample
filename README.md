@@ -21,11 +21,13 @@
 ## 作る時に参考にしたサイト
 
 - go
+    - [Go Official site](https://golang.org/)
     - [[Go] net/httpパッケージでWebサーバー（handlerの書き方、静的ファイル配信、Basic認証、など）](https://www.yoheim.net/blog.php?q=20170403)
     - [Dokcer ComposeでGoとPostgreSQLの開発環境構築](https://qiita.com/muroya2355/items/d48c384a4a82c7ed34ae)
     - [Go PostgreSQLにつないでみる](https://qiita.com/hiro9/items/e6e41ec822a7077c3568)
     - [Golangで構造体をJSONに変換してPOSTする](https://qiita.com/howmuch515/items/65094d18292ff1c4408c)
     - [GolangでレスポンスにJSONで返す](https://konboi.hatenablog.com/entry/2014/09/23/172756)
+    - [GolangでXMLHttpRequestLevel2+CORSのプリフライトが通るサーバーを立てる(BasicAuth付き)](https://qiita.com/romot/items/b49f7d9e28101daaa99e)
 
 - Postgres
     - [PostgreSQLでtimestamp型のデフォルト値を現在時刻にするには](http://tomute.hateblo.jp/entry/20131218/1387370615)
