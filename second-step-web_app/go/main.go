@@ -35,7 +35,7 @@ func msgListHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func header(w http.ResponseWriter) {
-	// reactはlocalhost:3000,goのWebアプリはlocalhost:8080で起動しているため
+	// reactはlocalhost:3000,goのWebアプリはlocalhost:8080で起動しているため記述
 	// ブラウザ上では別のドメインから双方アクセスしているクロスドメイン扱いになります
 
 	//リモートアドレスからのアクセスを許可する
