@@ -6,11 +6,11 @@ import (
 
 // Message struct
 type Message struct {
-	MessageID string `json:"id"`
-	Auther    string `json:"auther"`
-	Body      string `json:"body"`
-	ImagePath string `json:"path"`
-	Created   string `json:"created"`
+	ID          string `json:"id"`
+	Title       string `json:"title"`
+	Description string `json:"description"`
+	Path        string `json:"path"`
+	Created     string `json:"lastBuildDate"`
 }
 
 // Messages messages
@@ -29,11 +29,11 @@ func MessageList() Messages {
 	var ml Messages
 	for rows.Next() {
 		var m Message
-		if err := rows.Scan(&m.MessageID, &m.Auther, &m.Body, &m.Created); err != nil {
+		if err := rows.Scan(&m.ID, &m.Title, &m.Description, &m.Path, &m.Created); err != nil {
 			fmt.Println(err)
 		}
 		// names = append(names, name)
-		fmt.Println(m)
+		fmt.Println("Log MessgeList", m)
 		ml = append(ml, m)
 	}
 	return ml

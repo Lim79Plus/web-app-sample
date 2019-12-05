@@ -1,14 +1,13 @@
 -- create table
 CREATE TABLE messages (
-    msg_id SERIAL PRIMARY KEY,
-    auther VARCHAR(20) NOT NULL,
-    body VARCHAR(140) NOT NULL,
-    image_path VARCHAR(200) NOT NULL,
+    id INTEGER PRIMARY KEY,
+    title VARCHAR(20) NOT NULL,
+    description VARCHAR(140) NOT NULL,
+    path VARCHAR(200) NOT NULL,
     created timestamp default CURRENT_TIMESTAMP
 );
 
 -- data insert
-INSERT INTO messages (auther, body, image_path, created) VALUES 
- ('スピノザ(哲学者)', '人が不可能と思うとき、やりたくないと決めているのだ。','Spinoza', TO_TIMESTAMP('1632-11-24', 'YYYY-MM-DD'))
- ,('ラリー・ウォール', 'あなたたちの多くはプログラマの美徳をよく知っている。もちろんこの三つ、怠惰、短気、傲慢。','Larry Wall', TO_TIMESTAMP('1954-09-27', 'YYYY-MM-DD'))
- ;
+
+INSERT INTO messages (id, title, description, path, created) VALUES 
+(1, '歌舞伎町と果物', '「私は天皇陛下の人格を非常にそんけいしている。」とマハル師はかたった。「なので、私は自分が天皇ではなくてほんとうによかったとおもっている。」ともかたった。生ゆば君は立派な人格など持たされては負けなのかもしれないと思った。', '/absphoto/010_abs004.jpg', 'Wed, 11 Apr 2018 21:40:00 +0900' )

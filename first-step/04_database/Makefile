@@ -3,5 +3,5 @@ start-db:
 	# access -> docker exec -it postgres-one psql -d app_db -U app_user
 
 end-db:
-	docker-compose -f docker-compose.postgres.yml down
+	docker-compose -f docker-compose.postgres.yml down -v
 
