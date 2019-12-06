@@ -5,11 +5,13 @@ const fs = require('fs');
 const tweets = JSON.parse(fs.readFileSync('tweets.json'));
 
 router.get('/msg/max', function (req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({max:tweets.length}));
 });
 
 router.get('/msg', function (req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify(tweets));
 });
@@ -28,6 +30,7 @@ router.get('/msg/:from(\\d+)-:to(\\d+)', function (req, res, next) {
 
     const result = [...tweets].reverse().splice(from, to - from);
 
+    res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify(result));
 });
