@@ -15,7 +15,8 @@ class Tweet extends React.Component {
             <div className="tweet" key={this.state.data.id}>
                 <div className="container">
                     <div className="iconColumn">
-                        <img className="icon" src={"http://knights.ton-katsu.net/playtime/works" + this.state.data.path}/>
+                        <img className="icon" src={"http://knights.ton-katsu.net/playtime/works" + this.state.data.path}
+                        alt="アイコン"/>
                     </div>
                     <div className="contentColumn">
                         <div className="user">{this.state.data.title}</div>

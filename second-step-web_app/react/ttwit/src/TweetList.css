@@ -13,4 +13,19 @@
     text-align: center;
     color: #aaaaaa;
     margin: 1rem 0.5rem 2rem 0.5rem;
+
+
+}
+
+.max_anim{
+    animation-name: anime1;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+@keyframes anime1 {
+    0% {color: #aaaaaa;}
+    50% {color: #00B7FF;}
+    100% {color: #aaaaaa;}
 }

@@ -4,10 +4,6 @@ import Tweet from "./Tweet";
 
 class TweetList extends React.Component {
 
-    constructor(props) {
-        super(props);
-    };
-
     render() {
         let tweets = [];
 
@@ -19,9 +15,11 @@ class TweetList extends React.Component {
         let footer = <div></div>;
         if(this.props.isMax){
             footer = <div className="max">これ以上過去のツイートはありません</div>
+        } else {
+            footer = <div className="max max_anim">過去のツイートを取得中..</div>
         }
 
-        return (<div id="tweetList" className="column_tweet">
+        return (<div id="tweetList" className="column_tweet" onScroll={this.props.onScrollListener}>
             {tweets}
             {footer}
         </div>);
