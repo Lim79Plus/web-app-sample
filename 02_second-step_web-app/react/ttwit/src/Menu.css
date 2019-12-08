@@ -1,0 +1,13 @@
+.column{
+    min-width: 20vw;
+}
+
+.button{
+    color: #ffffff;
+    background: #f45d22;
+    border-radius: 20px;
+    margin: 2em;
+    text-align: center;
+    padding: 0.5em;
+    cursor: pointer;
+}
