@@ -1,0 +1,10 @@
+version: '3'
+services:
+  react:
+      image: node:8.16.2-alpine3.9
+      container_name: react-app
+      ports:
+        - 3000:3000
+      volumes:
+        - ./ttwit:/usr/src/app
+      command: sh -c "cd /usr/src/app && npm install && npm start"
