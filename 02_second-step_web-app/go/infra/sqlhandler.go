@@ -17,4 +17,5 @@ func init() {
 	}
 	fmt.Println("successflly get db connect")
 	SQLHandler = conn
+	migrate()
 }
