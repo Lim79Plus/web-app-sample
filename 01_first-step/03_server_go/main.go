@@ -1,7 +1,7 @@
 package main
 
 import (
-	"fmt"
+	"log"
 	"net/http"
 )
 
@@ -14,6 +14,10 @@ func main() {
 }
 
 func indexHandler(w http.ResponseWriter, r *http.Request) {
-	// データの返却
-	fmt.Fprint(w, "Hello World from Go.")
+	// HTTP メソッド
+	log.Printf("HTTP Method:%v\n", r.Method)
+	// どこからアクセスがあったか
+	log.Printf("HTTP Header:%v\n", r.Header["Referer"])
+	// アクセスしてきた端末の情報
+	log.Printf("User Agent%v\n", r.UserAgent())
 }

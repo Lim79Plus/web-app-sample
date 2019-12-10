@@ -12,6 +12,7 @@ class TweetList extends React.Component {
         let tweets = [];
 
         this.props.tweets.forEach((data) => {
+            console.log("TweetList:", data)
             let tw = (<Tweet data={data}/>);
             tweets.push(tw);
         });

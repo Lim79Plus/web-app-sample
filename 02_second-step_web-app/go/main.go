@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"text/template"
 
 	"github.com/Lim79Plus/web-app-sample/go/infra"
 )
@@ -18,7 +19,19 @@ func main() {
 }
 
 func indexHandler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprint(w, "Hello World from Go.")
+	// データの返却
+	t := template.Must(template.ParseFiles("./view/index.tpl"))
+	data := struct {
+		Message string
+	}{
+		Message: "Welcom to TONKATSU APP!!",
+	}
+
+	err := t.Execute(w, data)
+	if err != nil {
+		w.WriteHeader(http.StatusInternalServerError)
+		return
+	}
 }
 
 func msgListHandler(w http.ResponseWriter, r *http.Request) {
