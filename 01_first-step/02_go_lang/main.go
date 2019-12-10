@@ -3,6 +3,10 @@ package main
 import "log"
 
 func main() {
+	tmp()
+}
+
+func tmp() {
 	msg := "TONKATSU YAKITORI"
 	log.Printf("hello %v", msg)
 	value := 1
